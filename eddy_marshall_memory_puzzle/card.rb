@@ -6,22 +6,20 @@ class Card
         @reveal = false 
     end
 
-    def hide
+    def flip
         if @facing_up?
-            return false
+            @facing_up? = false
         else
-            return true
+            @facing_up? = true
         end
-    end
-
-    def reveal
-        @reveal
     end
 
     def to_s
         #change the card value :S to string "S"
+        @value.to_s
     end
-   
+    #H
+
     
 end
 
