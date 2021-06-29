@@ -2,6 +2,8 @@ require_relative "card"
 
 class Board
 
+    attr_reader :board
+
     def initialize
         @board = Array.new(4) {Array.new(4,nil)}
     end
@@ -39,5 +41,6 @@ class Board
         @board.each { |row| p row }
         return nil
     end
+    #hhh
 
 end
