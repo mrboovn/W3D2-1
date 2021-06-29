@@ -1,29 +1,26 @@
 class Card 
+    
+    attr_reader :card
+    
     def initialize
-        @facing = 'down'
         @value = ("A".."B").to_a.sample
-        @facing_up? = false     
+        @facing_up = false     
         @reveal = false 
     end
 
-    def hide
-        if @facing_up?
-            return false
+    def flip
+        if @facing_up
+            @facing_up = false
         else
-            return true
+            @facing_up = true
         end
-    end
-
-    def reveal
-        @reveal
     end
 
     def to_s
         #change the card value :S to string "S"
+        @value.to_s
     end
-   
+    #H
+
     
 end
-
-
-
