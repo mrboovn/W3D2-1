@@ -1,6 +1,6 @@
 class Card 
     
-    attr_reader :value ,:facing_up
+    attr_reader :value, :facing_up
     
     def initialize(value = ("A".."Z").to_a.sample )
         @value = value
@@ -17,7 +17,6 @@ class Card
     end
 
     def to_s
-        #change the card value :S to string "S"
         @value.to_s
     end
     

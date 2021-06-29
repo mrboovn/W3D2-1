@@ -9,7 +9,6 @@ class Board
     end
 
     def populate
-
         (@board.length * 2 ).times do 
             @card_1 = Card.new 
             @card_2 = Card.new(@card_1.value)
@@ -56,12 +55,16 @@ class Board
                 end
             end
             p arr 
-        end
-
-        #need to hide unsolved pieces
-        
+        end    
         return nil
     end
-    #hhh
+
+    def won?
+        @board.all? do |row|
+            row.all? { |ele| ele.facing_up == true }
+        end
+    end
+
 
 end
+

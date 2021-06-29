@@ -12,9 +12,7 @@ class Game
 
     def play
         @board.render 
+        
+    end
 
-
-
-    
-
-    #
+end
