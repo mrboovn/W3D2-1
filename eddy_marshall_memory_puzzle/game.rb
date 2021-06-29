@@ -7,12 +7,22 @@ class Game
     def initialize
         @board = Board.new
         @board.populate
-        @player = Player.new
+        @player = HumanPlayer.new
     end
 
     def play
-        @board.render 
-        
+        while @board.won? == false
+            @board.render
+            first_answer = @player.get_input
+            @board[first_answer].flip
+            @board.render 
+            second_answer = @player.get_input 
+            @board[second_answer].flip 
+            if @board[first_answer].value != @board[second_answer].value 
+                @board[first_answer].flip 
+                @board[second_answer].flip 
+            end
+        end
     end
 
 end

@@ -4,11 +4,7 @@ class HumanPlayer
 
     def get_input
         p "please enter your move"
-        @response = gets.chomp
-    end
-
-    def to_a(@response)
-        @response.split(" ").map! { |ele| ele.to_i }
+        @response = gets.chomp.split(" ").map! { |ele| ele.to_i }
     end
 
     def previous_answer
