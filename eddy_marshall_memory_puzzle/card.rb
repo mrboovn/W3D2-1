@@ -2,7 +2,7 @@ class Card
     
     attr_reader :value
     
-    def initialize(value = ("A".."B").to_a.sample )
+    def initialize(value = ("A".."Z").to_a.sample )
         @value = value
         @facing_up = false     
         @reveal = false 
