@@ -1,6 +1,6 @@
 class Card 
     
-    attr_reader :value
+    attr_reader :value ,:facing_up
     
     def initialize(value = ("A".."Z").to_a.sample )
         @value = value

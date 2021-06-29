@@ -25,7 +25,7 @@ class Board
             row = rand(0..3) 
             col = rand(0..3)
             if @board[row][col] == nil   
-                @board[row][col] = @card_1.value 
+                @board[row][col] = card 
                 placed = true 
             end   
         end       
@@ -46,8 +46,20 @@ class Board
     end
     
     def render
-        @board.each { |row| p row }
+        @board.each do |row|
+            arr = []
+            row.each do |ele|
+                if ele.facing_up == true 
+                    arr << ele.value
+                else
+                    arr << '_'
+                end
+            end
+            p arr 
+        end
+
         #need to hide unsolved pieces
+        
         return nil
     end
     #hhh
