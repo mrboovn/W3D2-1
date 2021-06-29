@@ -1,16 +1,18 @@
 class Card 
-    def initialize
-        @facing = 'down'
-        @value = ("A".."B").to_a.sample
-        @facing_up? = false     
+    
+    attr_reader :value
+    
+    def initialize(value = ("A".."B").to_a.sample )
+        @value = value
+        @facing_up = false     
         @reveal = false 
     end
 
     def flip
-        if @facing_up?
-            @facing_up? = false
+        if @facing_up
+            @facing_up = false
         else
-            @facing_up? = true
+            @facing_up = true
         end
     end
 
@@ -18,10 +20,8 @@ class Card
         #change the card value :S to string "S"
         @value.to_s
     end
-    #H
+    
+
 
     
 end
-
-
-
