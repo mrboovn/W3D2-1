@@ -1,9 +1,9 @@
 class Card 
     
-    attr_reader :card
+    attr_reader :value, :facing_up
     
-    def initialize
-        @value = ("A".."B").to_a.sample
+    def initialize(value = ("A".."B").to_a.sample )
+        @value = value
         @facing_up = false     
         @reveal = false 
     end
@@ -20,7 +20,8 @@ class Card
         #change the card value :S to string "S"
         @value.to_s
     end
-    #H
+    
+
 
     
 end
