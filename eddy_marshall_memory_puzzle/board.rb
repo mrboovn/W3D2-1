@@ -1,5 +1,11 @@
 class Board
 
-    def 
+    def
+
+
+
+    def ==(object)
+        
+    end
 
 end
