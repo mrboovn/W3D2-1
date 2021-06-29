@@ -9,18 +9,7 @@ class Board
     end
 
     def populate
-        # count = 0
-        # while count < (@board.length * @board.length)
-        #     @card_1 = Card.new
-        #     @card_2 = Card.new(@card_1.value)
-        #     row = rand(0..3) 
-        #     col = rand(0..3)
-        #     @board[row][col] = @card_1.value if @board[row][col] == nil
-        #     row = rand(0..3) 
-        #     col = rand(0..3)
-        #     @board[row][col] = @card_2.value if @board[row][col] == nil
-        #     count += 2
-        # end
+
         (@board.length * 2 ).times do 
             @card_1 = Card.new 
             @card_2 = Card.new(@card_1.value)
@@ -58,6 +47,7 @@ class Board
     
     def render
         @board.each { |row| p row }
+        #need to hide unsolved pieces
         return nil
     end
     #hhh
